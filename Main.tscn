@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ccjru1onq2k2c"]
+[gd_scene load_steps=28 format=3 uid="uid://ccjru1onq2k2c"]
 
 [ext_resource type="PackedScene" uid="uid://mb58xbunfaep" path="res://icons/weapon_ui.tscn" id="1_3u7h6"]
 [ext_resource type="Sky" uid="uid://jonn5eom7asv" path="res://Environment/sky/blue_sky.tres" id="2_4bjxn"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bi31qtqv1sf2s" path="res://Environment/flowers/flower_patch.tscn" id="15_jqya0"]
 [ext_resource type="PackedScene" uid="uid://cnj0t3ad178q6" path="res://DemoPage/DemoPage.tscn" id="16_qr75n"]
 [ext_resource type="AudioStream" uid="uid://bveh08m6w5ryf" path="res://Level/Music/mountain.mp3" id="17_mil5a"]
+[ext_resource type="PackedScene" uid="uid://d2hrc17vxolv8" path="res://UI/UI.tscn" id="19_mrk83"]
 
 [sub_resource type="Environment" id="Environment_allox"]
 background_mode = 2
@@ -77,6 +78,8 @@ offset_right = 192.0
 offset_bottom = -24.0
 grow_horizontal = 1
 grow_vertical = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_allox")
@@ -1603,6 +1606,8 @@ skeleton = NodePath("../..")
 [node name="FlowerPatch5" parent="Flowers" instance=ExtResource("15_jqya0")]
 transform = Transform3D(2.05346, 0, 0.789485, 0, 2.2, 0, -0.789485, 0, 2.05346, -0.0362195, 0.499586, -15.3836)
 skeleton = NodePath("../..")
+
+[node name="UI" parent="." instance=ExtResource("19_mrk83")]
 
 [node name="DemoPage" parent="." instance=ExtResource("16_qr75n")]
 
